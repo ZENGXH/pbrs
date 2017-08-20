@@ -79,7 +79,7 @@ xz -kd [project_id]
 The obj files are then converted to serialized file by calling the app `mtsimport` in Mitsuba. Note that this step requires the `texture` folder of SUNCG in [`./rendering/`](./rendering).
 ```
 mv [project_id].obj main.obj
-mtsimport main.obj main.xml
+mtsimport main.obj main.xml # make sure collada is found when installing with scons, otherwise there will be no mtsimport
 ```
 
 [`matlab/script_generate_serialized.m`](matlab/script_generate_serialized.m) generates batch command to quickly process all scenes.
